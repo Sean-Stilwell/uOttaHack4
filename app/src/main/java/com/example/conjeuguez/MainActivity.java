@@ -39,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Opens the screen to view stats
+     * @param v - The button to view the start
+     */
+    public void statsButton(View v){
+        Intent intent = new Intent(MainActivity.this, Stats.class);
+        startActivity(intent);
+    }
+
+    /**
      * Controls the verb tense being played and sets it to an instance variable
      * @param v - The button that was clicked
      * */

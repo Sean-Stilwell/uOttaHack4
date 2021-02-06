@@ -89,6 +89,8 @@ public class PlayGame extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt(tense+"attempts", totalAttempts);
         editor.putInt(tense+"correct", totalCorrect);
+        editor.commit();
+        Toast.makeText(getApplicationContext(), tense + totalAttempts + totalCorrect, Toast.LENGTH_LONG).show();
 
         newPuzzle();
     }
