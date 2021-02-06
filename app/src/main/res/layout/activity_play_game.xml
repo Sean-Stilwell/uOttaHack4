@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <LinearLayout
@@ -18,6 +18,7 @@
             android:layout_weight="0"
             android:gravity="center"
             android:orientation="horizontal"
+            android:paddingTop="140px"
             android:paddingBottom="50px">
 
             <TextView
@@ -151,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
-                android:paddingRight="30px"
+                android:paddingRight="15px"
                 android:text="Pronoun"
                 android:textColor="#000000"
                 android:textSize="18sp"
@@ -163,7 +164,19 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:paddingRight="15px" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="15px"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <Button
@@ -172,7 +185,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:onClick="submitButton"
-            android:text="Button"
+            android:text="SUBMIT"
             app:backgroundTint="#001F97" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

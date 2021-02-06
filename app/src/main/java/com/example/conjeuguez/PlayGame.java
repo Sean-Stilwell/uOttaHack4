@@ -34,14 +34,29 @@ public class PlayGame extends AppCompatActivity {
         setContentView(R.layout.activity_play_game);
         points = 0;
         newPuzzle();
+
+        if (tenseVal == 0){
+            tense = "Présent";
+        } else if (tenseVal == 1){
+            tense = "Imparfait";
+        } else if (tenseVal == 2){
+            tense = "Passé composé";
+        } else if (tenseVal == 3){
+            tense = "Futur";
+        } else {
+            tense = "Présent";
+        }
+        updateView();
     }
 
     public void submitButton(View v){
         EditText box = (EditText) findViewById(R.id.answerBox);
-        if (box.getText().equals(verb)){
+        if (box.getText().toString().equals(answer.trim())){
             points = points + 10;
         }
-        newPuzzle();
+        else {
+            points = points - 5;
+        }
     }
 
     private void newPuzzle(){
@@ -56,30 +71,7 @@ public class PlayGame extends AppCompatActivity {
             String[] array = (String[]) list.get(verbPos);
             verb = array[0];
             generatePronoun();
-            answer = array[pronounVal];
-
-//            switch (Puzzle.tense){
-//                case (0):
-//                    inputStream = getResources().openRawResource(R.raw.present);
-//                    csvFile = new CSVFile(inputStream);
-//                    list = csvFile.read();
-//                    break;
-//                case (1):
-//                    inputStream = getResources().openRawResource(R.raw.present);
-//                    csvFile = new CSVFile(inputStream);
-//                    list = csvFile.read();
-//                    break;
-//                case (2):
-//                    inputStream = getResources().openRawResource(R.raw.present);
-//                    csvFile = new CSVFile(inputStream);
-//                    list = csvFile.read();
-//                    break;
-//                case (3):
-//                    inputStream = getResources().openRawResource(R.raw.present);
-//                    csvFile = new CSVFile(inputStream);
-//                    list = csvFile.read();
-//                    break;
-//            }
+            answer = array[pronounVal + 1];
             updateView();
 
         } catch (Exception e){
@@ -102,7 +94,7 @@ public class PlayGame extends AppCompatActivity {
 
     private void generatePronoun(){
         Random rand = new Random();
-        pronounVal = rand.nextInt(8) + 1; // Generates from 0 to 7, +1 to account for non-conjugated verb
+        pronounVal = rand.nextInt(8); // Generates from 0 to 7
         int giveNameProb = rand.nextInt(10);
         switch (pronounVal){
             case (0):
