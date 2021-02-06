@@ -3,6 +3,7 @@ package com.example.conjeuguez;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
@@ -36,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
         } else if (!timeChecked){
             Toast.makeText(getApplicationContext(), "Please select a time limit!", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void websiteButton(View v){
+        Uri uriUrl = Uri.parse("https://seanstilwell.ca");
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+
+    public void githubButton(View v){
+        Uri uriUrl = Uri.parse("https://github.com/Sean-Stilwell/uOttaHack4");
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
     }
 
     /**

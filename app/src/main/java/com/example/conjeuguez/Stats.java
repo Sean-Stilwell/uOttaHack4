@@ -24,8 +24,8 @@ public class Stats extends AppCompatActivity {
         float totalCorrect = (float) prefs.getInt("Présentcorrect", 0);
         int successRate = 0;
         if (totalAttempts > 0){ successRate = (int) ((totalCorrect /  totalAttempts) * 100);}
-        presAttemptsView.setText(Float.toString(totalAttempts));
-        presCorrectView.setText(Float.toString(totalCorrect));
+        presAttemptsView.setText(Integer.toString((int) totalAttempts));
+        presCorrectView.setText(Integer.toString((int) totalCorrect));
         presRateView.setText(Integer.toString(successRate) + "%");
 
         // PRESENTS STATS
@@ -36,8 +36,8 @@ public class Stats extends AppCompatActivity {
         float impCorrect = (float) prefs.getInt("Imparfaitcorrect", 0);
         int impSuccessRate = 0;
         if (impAttempts > 0){ impSuccessRate = (int) ((impCorrect / impAttempts) * 100);}
-        impAttemptsView.setText(Float.toString(impAttempts));
-        impCorrectView.setText(Float.toString(impCorrect));
+        impAttemptsView.setText(Integer.toString((int) impAttempts));
+        impCorrectView.setText(Integer.toString((int) impCorrect));
         impRateView.setText(Integer.toString(impSuccessRate) + "%");
 
         // PASSE COMPOSE STATS
@@ -48,8 +48,8 @@ public class Stats extends AppCompatActivity {
         float pcCorrect = (float) prefs.getInt("Passé composécorrect", 0);
         int pcsuccessRate = 0;
         if (pcAttempts > 0){ pcsuccessRate = (int) ((pcCorrect / pcAttempts) * 100);}
-        pcAttemptsView.setText(Float.toString(pcAttempts));
-        pcCorrectView.setText(Float.toString(pcCorrect));
+        pcAttemptsView.setText(Integer.toString((int) pcAttempts));
+        pcCorrectView.setText(Integer.toString((int) pcCorrect));
         pcRateView.setText(Integer.toString(pcsuccessRate) + "%");
 
         // FUTUR STATS
@@ -60,8 +60,8 @@ public class Stats extends AppCompatActivity {
         float futurCorrect = (float) prefs.getInt("Futurcorrect", 0);
         int futursuccessRate = 0;
         if (futurAttempts > 0) { futursuccessRate = (int) ((futurCorrect / futurAttempts) * 100); }
-        futurAttemptsView.setText(Float.toString(futurAttempts));
-        futurCorrectView.setText(Float.toString(futurCorrect));
+        futurAttemptsView.setText(Integer.toString((int) futurAttempts));
+        futurCorrectView.setText(Integer.toString((int) futurCorrect));
         futurRateView.setText(Integer.toString(futursuccessRate) + "%");
     }
 }
