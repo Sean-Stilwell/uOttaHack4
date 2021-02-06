@@ -5,19 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.BufferedReader;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
-
-import com.opencsv.CSVReader;
 
 public class PlayGame extends AppCompatActivity {
     public static int tenseVal;
@@ -30,6 +27,7 @@ public class PlayGame extends AppCompatActivity {
     String answer;
     int points;
     SharedPreferences prefs;
+    boolean running = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +48,7 @@ public class PlayGame extends AppCompatActivity {
             tense = "Présent";
         }
         prefs = this.getSharedPreferences("prefsKey", Context.MODE_PRIVATE);
+        runTimer();
         updateView();
     }
 
@@ -101,14 +100,46 @@ public class PlayGame extends AppCompatActivity {
     private void updateView(){
         TextView pointsView = (TextView) findViewById(R.id.textView10);
         pointsView.setText(Integer.toString(points));
-        TextView timeView = (TextView) findViewById(R.id.textView12);
-        timeView.setText(Integer.toString(time));
+//        TextView timeView = (TextView) findViewById(R.id.textView12);
+//        timeView.setText(Integer.toString(time));
         TextView verbView = (TextView) findViewById(R.id.textView4);
         verbView.setText(verb);
         TextView tenseView = (TextView) findViewById(R.id.textView5);
         tenseView.setText(tense);
         TextView pronounView = (TextView) findViewById(R.id.textView13);
         pronounView.setText(pronoun);
+    }
+
+    private void runTimer(){
+        // Get the text view.
+        final TextView timeView = (TextView)findViewById(R.id.textView12);
+
+        // Creates a new Handler
+        final Handler handler = new Handler();
+
+        // Call the post() method, passing in a new Runnable. The post() method processes
+        // code without a delay, so the code in the Runnable will run almost immediately.
+        handler.post(new Runnable() {
+            @Override
+
+            public void run() {
+                // Set the text view text.
+                timeView.setText(Integer.toString(time));
+                if (running) {
+                    time--;
+                }
+                if (time <= 0){
+                    running = false;
+                    Button button = (Button) findViewById(R.id.button2);
+                    button.setEnabled(false);
+                    EditText textbox = (EditText) findViewById(R.id.answerBox);
+                    textbox.setEnabled(false);
+                }
+
+                // Post the code again with a delay of 1 second.
+                handler.postDelayed(this, 1000);
+            }
+        });
     }
 
     private void generatePronoun(){

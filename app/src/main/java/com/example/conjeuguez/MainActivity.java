@@ -33,16 +33,16 @@ public class MainActivity extends AppCompatActivity {
 
         switch(v.getId()){
             case R.id.radioButton:
-                PlayGame.tenseVal = 1;
+                PlayGame.tenseVal = 0;
                 break;
             case R.id.radioButton2:
-                PlayGame.tenseVal = 2;
+                PlayGame.tenseVal = 1;
                 break;
             case R.id.radioButton3:
-                PlayGame.tenseVal = 3;
+                PlayGame.tenseVal = 2;
                 break;
             case R.id.radioButton4:
-                PlayGame.tenseVal = 4;
+                PlayGame.tenseVal = 3;
                 break;
         }
     }
@@ -56,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
         switch(v.getId()){
             case R.id.radioButton5:
-                PlayGame.time = 1;
+                PlayGame.time = 60;
                 break;
             case R.id.radioButton6:
-                PlayGame.time = 2;
+                PlayGame.time = 120;
                 break;
             case R.id.radioButton7:
-                PlayGame.time = 5;
+                PlayGame.time = 300;
                 break;
         }
     }
