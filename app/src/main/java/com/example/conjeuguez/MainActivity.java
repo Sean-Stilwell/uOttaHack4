@@ -9,9 +9,6 @@ import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static int time;
-    public static int tense; // 1 = present, 2 = imperfect, 3 = past composed, 4 = future
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,16 +33,16 @@ public class MainActivity extends AppCompatActivity {
 
         switch(v.getId()){
             case R.id.radioButton:
-                tense = 1;
+                PlayGame.tenseVal = 1;
                 break;
             case R.id.radioButton2:
-                tense = 2;
+                PlayGame.tenseVal = 2;
                 break;
             case R.id.radioButton3:
-                tense = 3;
+                PlayGame.tenseVal = 3;
                 break;
             case R.id.radioButton4:
-                tense = 4;
+                PlayGame.tenseVal = 4;
                 break;
         }
     }
@@ -59,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
         switch(v.getId()){
             case R.id.radioButton5:
-                time = 1;
+                PlayGame.time = 1;
                 break;
             case R.id.radioButton6:
-                time = 2;
+                PlayGame.time = 2;
                 break;
             case R.id.radioButton7:
-                time = 5;
+                PlayGame.time = 5;
                 break;
         }
     }

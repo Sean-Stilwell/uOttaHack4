@@ -122,7 +122,7 @@
                 android:layout_weight="0"
                 android:paddingLeft="30px"
                 android:paddingRight="30px"
-                android:text="Present"
+                android:text="TENSE"
                 android:textColor="#001F97"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -158,13 +158,12 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/answerBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:inputType="textPersonName" />
         </LinearLayout>
 
         <Button
@@ -172,7 +171,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Submit"
+            android:onClick="submitButton"
+            android:text="Button"
             app:backgroundTint="#001F97" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
