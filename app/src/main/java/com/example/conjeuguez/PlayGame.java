@@ -2,6 +2,8 @@ package com.example.conjeuguez;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -27,6 +29,7 @@ public class PlayGame extends AppCompatActivity {
     int pronounVal;
     String answer;
     int points;
+    SharedPreferences prefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,17 +49,33 @@ public class PlayGame extends AppCompatActivity {
         } else {
             tense = "Présent";
         }
+        prefs = this.getSharedPreferences("prefsKey", Context.MODE_PRIVATE);
         updateView();
     }
 
     public void submitButton(View v){
         EditText box = (EditText) findViewById(R.id.answerBox);
+
+        // We keep track of how users perform in each verb tense.
+        int totalAttempts = prefs.getInt(tense + "attempts", 0);
+        totalAttempts++;
+        int totalCorrect = prefs.getInt(tense + "correct", 0);
+
+        // If the user gets an answer right, they are awarded points.
         if (box.getText().toString().equals(answer.trim())){
             points = points + 10;
+            totalCorrect++;
         }
         else {
             points = points - 5;
         }
+
+        // We then update the user's total correct and total attempted scores
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(tense+"attempts", totalAttempts);
+        editor.putInt(tense+"correct", totalCorrect);
+
+        newPuzzle();
     }
 
     private void newPuzzle(){
