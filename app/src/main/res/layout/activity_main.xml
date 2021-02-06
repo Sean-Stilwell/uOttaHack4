@@ -33,7 +33,7 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="     Verb Tense"
+                    android:text="Verb Tense"
                     android:textColor="#000000" />
 
                 <RadioGroup
@@ -44,24 +44,29 @@
                         android:id="@+id/radioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="radioButtonTense"
                         android:text="Présent" />
 
                     <RadioButton
                         android:id="@+id/radioButton2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="radioButtonTense"
                         android:text="Imparfait" />
 
                     <RadioButton
                         android:id="@+id/radioButton3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="radioButtonTense"
                         android:text="Passé composé" />
 
                     <RadioButton
                         android:id="@+id/radioButton4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="radioButtonTense"
                         android:text="Futur" />
                 </RadioGroup>
             </LinearLayout>
@@ -87,18 +92,22 @@
                         android:id="@+id/radioButton5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="radioButtonTime"
                         android:text="1 minute" />
 
                     <RadioButton
                         android:id="@+id/radioButton6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="radioButtonTime"
                         android:text="2 minutes" />
 
                     <RadioButton
                         android:id="@+id/radioButton7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="radioButtonTime"
                         android:text="5 minutes" />
                 </RadioGroup>
             </LinearLayout>
@@ -109,6 +118,7 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="playGameButton"
             android:text="Start Game!"
             app:backgroundTint="#001F97" />
     </LinearLayout>
