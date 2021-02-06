@@ -46,7 +46,7 @@
                         android:id="@+id/radioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:checked="true"
+                        android:checked="false"
                         android:onClick="radioButtonTense"
                         android:text="Présent" />
 
@@ -96,7 +96,7 @@
                         android:id="@+id/radioButton5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:checked="true"
+                        android:checked="false"
                         android:onClick="radioButtonTime"
                         android:text="1 minute" />
 

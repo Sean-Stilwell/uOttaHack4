@@ -6,13 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    boolean tenseChecked;
+    boolean timeChecked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tenseChecked = false;
+        timeChecked = false;
     }
 
     /**
@@ -20,8 +26,16 @@ public class MainActivity extends AppCompatActivity {
      * @param v - The button to start the game
      */
     public void playGameButton(View v){
-        Intent intent = new Intent(MainActivity.this, PlayGame.class);
-        startActivity(intent);
+        if (tenseChecked && timeChecked){
+            Intent intent = new Intent(MainActivity.this, PlayGame.class);
+            startActivity(intent);
+        } else if (!tenseChecked && !timeChecked){
+            Toast.makeText(getApplicationContext(), "Please select a verb tense and time limit to play.", Toast.LENGTH_LONG).show();
+        } else if (!tenseChecked){
+            Toast.makeText(getApplicationContext(), "Please select a verb tense!", Toast.LENGTH_LONG).show();
+        } else if (!timeChecked){
+            Toast.makeText(getApplicationContext(), "Please select a time limit!", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
@@ -29,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      * @param v - The button that was clicked
      * */
     public void radioButtonTense(View v){
-        boolean checked = ((RadioButton) v).isChecked();
+        tenseChecked = true;
 
         switch(v.getId()){
             case R.id.radioButton:
@@ -52,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
      * @param v - The button that was clicked
      */
     public void radioButtonTime(View v){
-        boolean checked = ((RadioButton) v).isChecked();
-
+        timeChecked = true;
         switch(v.getId()){
             case R.id.radioButton5:
                 PlayGame.time = 60;

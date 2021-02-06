@@ -19,6 +19,7 @@ import java.util.Random;
 public class PlayGame extends AppCompatActivity {
     public static int tenseVal;
     public static int time;
+    public static int startingTime;
 
     String tense;
     String verb;
@@ -28,12 +29,14 @@ public class PlayGame extends AppCompatActivity {
     int points;
     SharedPreferences prefs;
     boolean running = true;
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_game);
         points = 0;
+        startingTime = time;
         newPuzzle();
 
         if (tenseVal == 0){
@@ -50,6 +53,20 @@ public class PlayGame extends AppCompatActivity {
         prefs = this.getSharedPreferences("prefsKey", Context.MODE_PRIVATE);
         runTimer();
         updateView();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        running = false;
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        running = true;
+        time = startingTime;
+        newPuzzle();
     }
 
     public void submitButton(View v){
@@ -78,8 +95,13 @@ public class PlayGame extends AppCompatActivity {
     }
 
     private void newPuzzle(){
+        EditText box = (EditText) findViewById(R.id.answerBox);
+        box.setText("");
         try {
             InputStream inputStream = getResources().openRawResource(R.raw.present);
+            if (tenseVal == 1) { inputStream = getResources().openRawResource(R.raw.present); }
+            if (tenseVal == 2) { inputStream = getResources().openRawResource(R.raw.passecompose); }
+            if (tenseVal == 3) { inputStream = getResources().openRawResource(R.raw.present); }
             CSVFile csvFile = new CSVFile(inputStream);
             List list = csvFile.read();
 
@@ -100,8 +122,6 @@ public class PlayGame extends AppCompatActivity {
     private void updateView(){
         TextView pointsView = (TextView) findViewById(R.id.textView10);
         pointsView.setText(Integer.toString(points));
-//        TextView timeView = (TextView) findViewById(R.id.textView12);
-//        timeView.setText(Integer.toString(time));
         TextView verbView = (TextView) findViewById(R.id.textView4);
         verbView.setText(verb);
         TextView tenseView = (TextView) findViewById(R.id.textView5);
@@ -115,13 +135,12 @@ public class PlayGame extends AppCompatActivity {
         final TextView timeView = (TextView)findViewById(R.id.textView12);
 
         // Creates a new Handler
-        final Handler handler = new Handler();
+        handler = new Handler();
 
         // Call the post() method, passing in a new Runnable. The post() method processes
         // code without a delay, so the code in the Runnable will run almost immediately.
         handler.post(new Runnable() {
             @Override
-
             public void run() {
                 // Set the text view text.
                 timeView.setText(Integer.toString(time));
