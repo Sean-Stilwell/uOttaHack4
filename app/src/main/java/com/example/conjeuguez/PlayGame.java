@@ -36,7 +36,6 @@ public class PlayGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_game);
         points = 0;
-        startingTime = time;
         newPuzzle();
 
         if (tenseVal == 0){
@@ -99,9 +98,9 @@ public class PlayGame extends AppCompatActivity {
         box.setText("");
         try {
             InputStream inputStream = getResources().openRawResource(R.raw.present);
-            if (tenseVal == 1) { inputStream = getResources().openRawResource(R.raw.present); }
+            if (tenseVal == 1) { inputStream = getResources().openRawResource(R.raw.imparfait); }
             if (tenseVal == 2) { inputStream = getResources().openRawResource(R.raw.passecompose); }
-            if (tenseVal == 3) { inputStream = getResources().openRawResource(R.raw.present); }
+            if (tenseVal == 3) { inputStream = getResources().openRawResource(R.raw.futur); }
             CSVFile csvFile = new CSVFile(inputStream);
             List list = csvFile.read();
 

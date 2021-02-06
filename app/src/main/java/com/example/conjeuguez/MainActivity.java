@@ -70,12 +70,15 @@ public class MainActivity extends AppCompatActivity {
         switch(v.getId()){
             case R.id.radioButton5:
                 PlayGame.time = 60;
+                PlayGame.startingTime = 60;
                 break;
             case R.id.radioButton6:
                 PlayGame.time = 120;
+                PlayGame.startingTime = 120;
                 break;
             case R.id.radioButton7:
                 PlayGame.time = 300;
+                PlayGame.startingTime = 300;
                 break;
         }
     }

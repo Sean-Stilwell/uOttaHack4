@@ -55,7 +55,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:onClick="radioButtonTense"
-                        android:text="Imparfait" />
+                        android:text="Imparfait"
+                        android:visibility="visible" />
 
                     <RadioButton
                         android:id="@+id/radioButton3"
@@ -69,7 +70,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:onClick="radioButtonTense"
-                        android:text="Futur" />
+                        android:text="Futur"
+                        android:visibility="gone" />
                 </RadioGroup>
             </LinearLayout>
 
