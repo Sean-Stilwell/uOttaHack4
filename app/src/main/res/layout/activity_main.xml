@@ -15,7 +15,7 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="382dp"
-            android:layout_height="227dp"
+            android:layout_height="170dp"
             app:srcCompat="@drawable/logo_en" />
 
         <LinearLayout
@@ -71,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:onClick="radioButtonTense"
                         android:text="Futur"
-                        android:visibility="gone" />
+                        android:visibility="visible" />
                 </RadioGroup>
             </LinearLayout>
 
