@@ -14,9 +14,9 @@ This app is a game to help students learn French verb conjugations. Users can se
 
 During the game, the app provides verbs and pronouns to use for conjugation (for example, conjugate "demander" for "il"). The user must input the correct answer to earn points. My idea is that this could occur in a group setting, with the student that gets the most points in a time period winning.
 
-<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/382/693/datas/original.png">
+<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/382/693/datas/original.png" width="250px">
 
-<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/382/695/datas/original.png">
+<img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/382/695/datas/original.png" width="250px">
 
 ## How I built it
 
