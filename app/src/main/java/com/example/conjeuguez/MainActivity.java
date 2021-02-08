@@ -15,21 +15,19 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    boolean tenseChecked;
-    boolean timeChecked;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tenseChecked = false;
-        timeChecked = false;
+
+        // Initializes the spinner (dropdown) for the tense options
         Spinner spinnerTense = findViewById(R.id.spinner3);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tenses, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinnerTense.setAdapter(adapter);
         spinnerTense.setOnItemSelectedListener(this);
 
+        // Initializes the spinner (dropdown) for the time options
         Spinner spinnerTime = findViewById(R.id.spinner4);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.times, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_item);
@@ -46,12 +44,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         startActivity(intent);
     }
 
+    /**
+     * Opens SeanStilwell.ca
+     * @param v - The button to open the website
+     */
     public void websiteButton(View v){
         Uri uriUrl = Uri.parse("https://seanstilwell.ca");
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
 
+    /**
+     * Opens the Github repository for this game
+     * @param v - The button to open the repo.
+     */
     public void githubButton(View v){
         Uri uriUrl = Uri.parse("https://github.com/Sean-Stilwell/uOttaHack4");
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);

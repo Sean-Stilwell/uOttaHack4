@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Stats extends AppCompatActivity {
-    SharedPreferences prefs;
+    SharedPreferences prefs; // Allows access to the preferences for displaying
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,9 @@ public class Stats extends AppCompatActivity {
         updateView();
     }
 
+    /**
+     * Updates the view to display the current stats on launch or after points reset
+     */
     private void updateView(){
         // PRESENTS STATS
         TextView presAttemptsView = (TextView) findViewById(R.id.textView15);
@@ -81,6 +84,10 @@ public class Stats extends AppCompatActivity {
         condRateView.setText(Integer.toString(condsuccessRate) + "%");
     }
 
+    /**
+     * On clicking the button, resets all of the user's scores to 0.
+     * @param v - The button being clicked.
+     */
     public void resetstats(View v){
         SharedPreferences.Editor editor = prefs.edit();
         editor.putInt("Présentattempts", 0);
