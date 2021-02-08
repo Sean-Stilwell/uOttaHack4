@@ -6,10 +6,14 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     boolean tenseChecked;
     boolean timeChecked;
@@ -20,6 +24,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tenseChecked = false;
         timeChecked = false;
+        Spinner spinnerTense = findViewById(R.id.spinner3);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tenses, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spinnerTense.setAdapter(adapter);
+        spinnerTense.setOnItemSelectedListener(this);
+
+        Spinner spinnerTime = findViewById(R.id.spinner4);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.times, android.R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spinnerTime.setAdapter(adapter2);
+        spinnerTime.setOnItemSelectedListener(this);
     }
 
     /**
@@ -27,16 +42,8 @@ public class MainActivity extends AppCompatActivity {
      * @param v - The button to start the game
      */
     public void playGameButton(View v){
-        if (tenseChecked && timeChecked){
-            Intent intent = new Intent(MainActivity.this, PlayGame.class);
-            startActivity(intent);
-        } else if (!tenseChecked && !timeChecked){
-            Toast.makeText(getApplicationContext(), "Please select a verb tense and time limit to play.", Toast.LENGTH_LONG).show();
-        } else if (!tenseChecked){
-            Toast.makeText(getApplicationContext(), "Please select a verb tense!", Toast.LENGTH_LONG).show();
-        } else if (!timeChecked){
-            Toast.makeText(getApplicationContext(), "Please select a time limit!", Toast.LENGTH_LONG).show();
-        }
+        Intent intent = new Intent(MainActivity.this, PlayGame.class);
+        startActivity(intent);
     }
 
     public void websiteButton(View v){
@@ -60,48 +67,35 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /**
-     * Controls the verb tense being played and sets it to an instance variable
-     * @param v - The button that was clicked
-     * */
-    public void radioButtonTense(View v){
-        tenseChecked = true;
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String val = parent.getItemAtPosition(position).toString();
+        if (val.equals("Présent")){
+            PlayGame.tenseVal = 0;
+        } else if (val.equals("Imparfait")){
+            PlayGame.tenseVal = 1;
+        } else if (val.equals("Passé composé")){
+            PlayGame.tenseVal = 2;
+        } else if (val.equals("Futur")){
+            PlayGame.tenseVal = 3;
+        } else if (val.equals("Conditionnel (Présent)")){
+            PlayGame.tenseVal = 4;
+        }
 
-        switch(v.getId()){
-            case R.id.radioButton:
-                PlayGame.tenseVal = 0;
-                break;
-            case R.id.radioButton2:
-                PlayGame.tenseVal = 1;
-                break;
-            case R.id.radioButton3:
-                PlayGame.tenseVal = 2;
-                break;
-            case R.id.radioButton4:
-                PlayGame.tenseVal = 3;
-                break;
+        if (val.equals("1 minute")){
+            PlayGame.time = 60;
+            PlayGame.startingTime = 60;
+        } else if (val.equals("2 minutes")){
+            PlayGame.time = 120;
+            PlayGame.startingTime = 120;
+        } else if (val.equals("5 minutes")){
+            PlayGame.time = 500;
+            PlayGame.startingTime = 500;
         }
     }
 
-    /**
-     * Controls the amount of time for the game and sets it to an instance variable
-     * @param v - The button that was clicked
-     */
-    public void radioButtonTime(View v){
-        timeChecked = true;
-        switch(v.getId()){
-            case R.id.radioButton5:
-                PlayGame.time = 60;
-                PlayGame.startingTime = 60;
-                break;
-            case R.id.radioButton6:
-                PlayGame.time = 120;
-                PlayGame.startingTime = 120;
-                break;
-            case R.id.radioButton7:
-                PlayGame.time = 300;
-                PlayGame.startingTime = 300;
-                break;
-        }
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

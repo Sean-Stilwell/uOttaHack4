@@ -9,122 +9,73 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="center_horizontal|center_vertical"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="382dp"
             android:layout_height="170dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/logo"
             app:srcCompat="@drawable/logo_en" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingTop="20dp"
+            android:paddingRight="40dp"
+            android:text="@string/verb_tense"
+            android:textColor="#000000"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingTop="5dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:paddingLeft="40dp"
+            android:paddingTop="20dp"
+            android:paddingRight="40dp"
+            android:text="@string/time"
+            android:textColor="#000000"
+            android:textSize="21sp"
+            android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Verb Tense"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-
-                    <RadioButton
-                        android:id="@+id/radioButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:onClick="radioButtonTense"
-                        android:text="Présent" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="radioButtonTense"
-                        android:text="Imparfait"
-                        android:visibility="visible" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="radioButtonTense"
-                        android:text="Passé composé" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="radioButtonTense"
-                        android:text="Futur"
-                        android:visibility="visible" />
-                </RadioGroup>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingLeft="75px">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Time"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <RadioGroup
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <RadioButton
-                        android:id="@+id/radioButton5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:checked="false"
-                        android:onClick="radioButtonTime"
-                        android:text="1 minute" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="radioButtonTime"
-                        android:text="2 minutes" />
-
-                    <RadioButton
-                        android:id="@+id/radioButton7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:onClick="radioButtonTime"
-                        android:text="5 minutes" />
-                </RadioGroup>
-            </LinearLayout>
-
-        </LinearLayout>
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingTop="5dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="5dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            style="?android:attr/buttonBarStyle">
 
             <Button
                 android:id="@+id/button"
@@ -132,8 +83,10 @@
                 android:layout_height="wrap_content"
                 android:insetRight="10dp"
                 android:onClick="playGameButton"
-                android:text="Start Game!"
-                app:backgroundTint="#001F97" />
+                android:text="@string/start_button"
+                android:textSize="18sp"
+                app:backgroundTint="#001F97"
+                style="?android:attr/borderlessButtonStyle"/>
 
             <Button
                 android:id="@+id/button3"
@@ -141,8 +94,10 @@
                 android:layout_height="wrap_content"
                 android:insetLeft="10dp"
                 android:onClick="statsButton"
-                android:text="Stats"
-                app:backgroundTint="#001F97" />
+                android:text="@string/stats_button"
+                android:textSize="18sp"
+                app:backgroundTint="#001F97"
+                style="?android:attr/borderlessButtonStyle"/>
         </LinearLayout>
 
         <LinearLayout
@@ -157,6 +112,7 @@
                 android:layout_height="38dp"
                 android:adjustViewBounds="false"
                 android:background="#FFFFFF"
+                android:contentDescription="@string/website_button"
                 android:cropToPadding="false"
                 android:onClick="websiteButton"
                 android:paddingLeft="15dp"
@@ -170,6 +126,7 @@
                 android:layout_height="38dp"
                 android:adjustViewBounds="false"
                 android:background="#FFFFFF"
+                android:contentDescription="@string/github_button"
                 android:cropToPadding="false"
                 android:onClick="githubButton"
                 android:paddingLeft="15dp"

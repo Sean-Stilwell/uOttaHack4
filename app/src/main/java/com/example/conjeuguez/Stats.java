@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class Stats extends AppCompatActivity {
@@ -15,7 +16,10 @@ public class Stats extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
         prefs = this.getSharedPreferences("prefsKey", Context.MODE_PRIVATE);
+        updateView();
+    }
 
+    private void updateView(){
         // PRESENTS STATS
         TextView presAttemptsView = (TextView) findViewById(R.id.textView15);
         TextView presCorrectView = (TextView) findViewById(R.id.textView17);
@@ -63,5 +67,33 @@ public class Stats extends AppCompatActivity {
         futurAttemptsView.setText(Integer.toString((int) futurAttempts));
         futurCorrectView.setText(Integer.toString((int) futurCorrect));
         futurRateView.setText(Integer.toString(futursuccessRate) + "%");
+
+        // CONDITIONNEL (PRESENT) STATS
+        TextView condAttemptsView = (TextView) findViewById(R.id.textView33);
+        TextView condCorrectView = (TextView) findViewById(R.id.textView35);
+        TextView condRateView = (TextView) findViewById(R.id.textView44);
+        float condAttempts = (float) prefs.getInt("Conditionnel (Présent)attempts", 0);
+        float condCorrect = (float) prefs.getInt("Conditionnel (Présent)correct", 0);
+        int condsuccessRate = 0;
+        if (condAttempts > 0) { condsuccessRate = (int) ((condCorrect / condAttempts) * 100); }
+        condAttemptsView.setText(Integer.toString((int) condAttempts));
+        condCorrectView.setText(Integer.toString((int) condCorrect));
+        condRateView.setText(Integer.toString(condsuccessRate) + "%");
+    }
+
+    public void resetstats(View v){
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt("Présentattempts", 0);
+        editor.putInt("Présentcorrect", 0);
+        editor.putInt("Imparfaitattempts", 0);
+        editor.putInt("Imparfaitcorrect", 0);
+        editor.putInt("Passé composéattempts", 0);
+        editor.putInt("Passé composécorrect", 0);
+        editor.putInt("Futurattempts", 0);
+        editor.putInt("Futurcorrect", 0);
+        editor.putInt("Conditionnel (Présent)attempts", 0);
+        editor.putInt("Conditionnel (Présent)correct", 0);
+        editor.commit(); // We have to commit our changes to save them.
+        updateView();
     }
 }

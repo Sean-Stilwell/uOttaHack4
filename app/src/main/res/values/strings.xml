@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">Conjeuguez</string>
+    <string name="stats_button">Stats</string>
+    <string name="start_button">Start Game</string>
+    <string name="website_button">Visit SeanStilwell.ca</string>
+    <string name="github_button">Visit the Conjeuguez GitHub page</string>
+    <string name="reset_stats_button">Reset Stats</string>
+    <string name="time">Time</string>
+    <string name="points">Points</string>
+    <string name="verb_tense">Verb Tense</string>
+    <string name="logo">Conjeuguez Logo</string>
+    <string name="conjugate_the_verb">Conjugate the verb</string>
+    <string name="in_the">in the</string>
+    <string name="tense">tense.</string>
+    <string name="submit">Submit</string>
+    <string name="answer">Answer</string>
+
+    <string name="present_attempted">Présent Verbs Attempted:</string>
+    <string name="present_passed">Présent Verbs Passed:</string>
+    <string name="present_pass_rate">Présent Pass Rate:</string>
+    <string name="imp_attempted">Imparfait Verbs Attempted:</string>
+    <string name="imp_passed">Imparfait Verbs Passed:</string>
+    <string name="imp_pass_rate">Imparfait Pass Rate:</string>
+    <string name="pc_attempted">Passé composé Verbs Attempted:</string>
+    <string name="pc_passed">Passé composé Verbs Passed:</string>
+    <string name="pc_pass_rate">Passé composé Pass Rate:</string>
+    <string name="futur_attempted">Futur Verbs Attempted:</string>
+    <string name="futur_passed">Futur Verbs Passed:</string>
+    <string name="futur_pass_rate">Futur Pass Rate:</string>
+    <string name="cond_attempted">Conditionnel (Présent) Verbs Attempted:</string>
+    <string name="cond_passed">Conditionnel (Présent) Verbs Passed:</string>
+    <string name="cond_pass_rate">Conditionnel (Présent) Pass Rate:</string>
+
+    <string name="placeholder">XXX</string>
+
+    <string-array name="tenses">
+        <item>Présent</item>
+        <item>Imparfait</item>
+        <item>Passé composé</item>
+        <item>Futur</item>
+        <item>Conditionnel (Présent)</item>
+    </string-array>
+    <string-array name="times">
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>5 minutes</item>
+    </string-array>
 </resources>
