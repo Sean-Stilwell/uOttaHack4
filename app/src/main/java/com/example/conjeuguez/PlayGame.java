@@ -93,7 +93,7 @@ public class PlayGame extends AppCompatActivity {
         int totalCorrect = prefs.getInt(tense + "correct", 0);
 
         // If the user gets an answer right, they are awarded points.
-        if (box.getText().toString().equals(answer.trim())){
+        if (box.getText().toString().toLowerCase().equals(answer.trim())){
             points = points + 10;
             correct++;
             totalCorrect++;
@@ -157,9 +157,21 @@ public class PlayGame extends AppCompatActivity {
             verb = array[0]; // The unconjugated verb is found in the 0 position
             generatePronoun(); // We select a random pronoun to be used in the solution
             answer = array[pronounVal + 1]; // We then select the answer that corresponds to the pronoun.
+            if (pronoun.equals("Je")){
+                validateJe();
+            }
             updateView(); // We update the view to show the verb and pronoun needed.
         } catch (Exception e){
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    /**
+     * Changes the French singular first-person to J' if the answer starts with a vowel.
+     */
+    private void validateJe(){
+        if (answer.charAt(0) == 'a' || answer.charAt(0) == 'e' || answer.charAt(0) == 'i' || answer.charAt(0) == 'o' || answer.charAt(0) == 'u' || answer.charAt(0) == 'é'){
+            pronoun = "J'";
         }
     }
 

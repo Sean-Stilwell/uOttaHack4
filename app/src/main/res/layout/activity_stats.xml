@@ -141,7 +141,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/imp_attempted"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView24"
@@ -150,7 +150,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -168,7 +168,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/imp_passed"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView26"
@@ -177,7 +177,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -195,7 +195,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/imp_pass_rate"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView22"
@@ -204,7 +204,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -223,7 +223,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/pc_attempted"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView28"
@@ -232,7 +232,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -250,7 +250,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/pc_passed"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView30"
@@ -259,7 +259,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -277,7 +277,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/pc_pass_rate"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView32"
@@ -286,7 +286,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                 </LinearLayout>
 
@@ -306,7 +306,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/futur_attempted"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView37"
@@ -315,7 +315,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -333,7 +333,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/futur_passed"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView39"
@@ -342,7 +342,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -360,7 +360,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/futur_pass_rate"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView41"
@@ -369,7 +369,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -382,22 +382,21 @@
                         android:id="@+id/textView20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:gravity="end"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:text="@string/cond_attempted"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView33"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -409,22 +408,21 @@
                         android:id="@+id/textView34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:gravity="end"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
                         android:text="@string/cond_passed"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView35"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -442,7 +440,7 @@
                         android:paddingRight="15dp"
                         android:text="@string/cond_pass_rate"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
 
                     <TextView
                         android:id="@+id/textView44"
@@ -451,7 +449,7 @@
                         android:layout_weight="1"
                         android:text="@string/placeholder"
                         android:textColor="#001F97"
-                        android:textSize="18sp" />
+                        android:textSize="17sp" />
                 </LinearLayout>
 
                 <Button
