@@ -9,6 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F6F6F6"
         android:gravity="center_horizontal|center_vertical"
         android:orientation="vertical">
 
@@ -70,48 +71,49 @@
             android:paddingBottom="5dp" />
 
         <LinearLayout
+            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingTop="15dp"
-            style="?android:attr/buttonBarStyle">
+            android:paddingTop="15dp">
 
             <Button
                 android:id="@+id/button"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:insetRight="10dp"
                 android:onClick="playGameButton"
                 android:text="@string/start_button"
                 android:textSize="18sp"
-                app:backgroundTint="#001F97"
-                style="?android:attr/borderlessButtonStyle"/>
+                app:backgroundTint="#001F97" />
 
             <Button
                 android:id="@+id/button3"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:insetLeft="10dp"
                 android:onClick="statsButton"
                 android:text="@string/stats_button"
                 android:textSize="18sp"
-                app:backgroundTint="#001F97"
-                style="?android:attr/borderlessButtonStyle"/>
+                app:backgroundTint="#001F97" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
 
             <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="68dp"
                 android:layout_height="38dp"
                 android:adjustViewBounds="false"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:contentDescription="@string/website_button"
                 android:cropToPadding="false"
                 android:onClick="websiteButton"
@@ -125,7 +127,7 @@
                 android:layout_width="68dp"
                 android:layout_height="38dp"
                 android:adjustViewBounds="false"
-                android:background="#FFFFFF"
+                android:background="#00FFFFFF"
                 android:contentDescription="@string/github_button"
                 android:cropToPadding="false"
                 android:onClick="githubButton"

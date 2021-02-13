@@ -14,6 +14,9 @@
     <string name="tense">tense.</string>
     <string name="submit">Submit</string>
     <string name="answer">Answer</string>
+    <string name="playagain">Restart</string>
+    <string name="results1">Good work, you passed </string>
+    <string name="results2"> out of </string>
 
     <string name="present_attempted">Présent Verbs Attempted:</string>
     <string name="present_passed">Présent Verbs Passed:</string>

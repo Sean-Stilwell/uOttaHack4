@@ -30,6 +30,8 @@ public class PlayGame extends AppCompatActivity {
 
     int pronounVal; // Position in the array of a pronoun
     int points; // Number of points earned by a player in a game
+    int correct;
+    int attempts;
     SharedPreferences prefs; // Allows us to store results
     boolean running = true; // When true, the timer is counting down
     Handler handler; // For controlling the timer
@@ -39,6 +41,8 @@ public class PlayGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_game);
         points = 0;
+        correct = 0;
+        attempts = 0;
         newPuzzle(); // The game immediately starts a puzzle when the user starts
 
         // Converts the static variable used by MainActivity into what we want to display
@@ -91,11 +95,13 @@ public class PlayGame extends AppCompatActivity {
         // If the user gets an answer right, they are awarded points.
         if (box.getText().toString().equals(answer.trim())){
             points = points + 10;
+            correct++;
             totalCorrect++;
         }
         else { // If the user is wrong, their points are decremented
             points = points - 5;
         }
+        attempts++;
 
         // We then update the user's total correct and total attempted scores
         SharedPreferences.Editor editor = prefs.edit();
@@ -104,6 +110,24 @@ public class PlayGame extends AppCompatActivity {
         editor.commit(); // We have to commit our changes to save them.
 
         newPuzzle(); // A new puzzle is created and shown.
+    }
+
+    /**
+     * When a user finishes, or decides to in the middle of the game, they can restart the game from the starting time.
+     * @param v - The button that was clicked.
+     */
+    public void resetButton(View v){
+        time = startingTime;
+        newPuzzle();
+        correct = 0;
+        attempts = 0;
+        points = 0;
+        Button button = (Button) findViewById(R.id.button2);
+        button.setEnabled(true);
+        EditText textbox = (EditText) findViewById(R.id.answerBox);
+        textbox.setEnabled(true);
+        running = true;
+        updateView();
     }
 
     /**
@@ -151,6 +175,12 @@ public class PlayGame extends AppCompatActivity {
         tenseView.setText(tense);
         TextView pronounView = (TextView) findViewById(R.id.textView13);
         pronounView.setText(pronoun);
+        TextView timeView = (TextView)findViewById(R.id.textView12);
+        timeView.setText(Integer.toString(time));
+        TextView correctAnswers = (TextView) findViewById(R.id.textView46);
+        correctAnswers.setText(Integer.toString(correct));
+        TextView attemptedAnswers = (TextView) findViewById(R.id.textView48);
+        attemptedAnswers.setText(Integer.toString(attempts));
     }
 
     /**
@@ -174,13 +204,30 @@ public class PlayGame extends AppCompatActivity {
                     time--;
                 }
 
+                TextView resultView1 = (TextView) findViewById(R.id.textView45);
+                TextView resultView2 = (TextView) findViewById(R.id.textView46);
+                TextView resultView3 = (TextView) findViewById(R.id.textView47);
+                TextView resultView4 = (TextView) findViewById(R.id.textView48);
+                EditText textbox = (EditText) findViewById(R.id.answerBox);
+                Button button = (Button) findViewById(R.id.button2);
+
                 // When time is out, we disable the user's ability to add a new solution.
                 if (time <= 0){
                     running = false;
-                    Button button = (Button) findViewById(R.id.button2);
                     button.setEnabled(false);
-                    EditText textbox = (EditText) findViewById(R.id.answerBox);
                     textbox.setEnabled(false);
+                    resultView1.setVisibility(View.VISIBLE);
+                    resultView2.setVisibility(View.VISIBLE);
+                    resultView3.setVisibility(View.VISIBLE);
+                    resultView4.setVisibility(View.VISIBLE);
+                }
+                else {
+                    button.setEnabled(true);
+                    textbox.setEnabled(true);
+                    resultView1.setVisibility(View.INVISIBLE);
+                    resultView2.setVisibility(View.INVISIBLE);
+                    resultView3.setVisibility(View.INVISIBLE);
+                    resultView4.setVisibility(View.INVISIBLE);
                 }
 
                 // Post the code again with a delay of 1 second.

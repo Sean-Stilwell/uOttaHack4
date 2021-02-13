@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Conjeuguez</string>
+    <string name="stats_button">Statistiques</string>
+    <string name="start_button">Commencez</string>
+    <string name="website_button">Visiez SeanStilwell.ca</string>
+    <string name="github_button">Visiez le GitHub de Conjeuguez</string>
+    <string name="reset_stats_button">Réinitialiser</string>
+    <string name="time">Temps</string>
+    <string name="points">Points</string>
+    <string name="verb_tense">Temps du verbe</string>
+    <string name="logo">Logo de Conjeuguez</string>
+    <string name="conjugate_the_verb">Conjuguez le verbe</string>
+    <string name="in_the">dans le</string>
+    <string name="tense">.</string>
+    <string name="submit">Soumettez</string>
+    <string name="answer">Réponse</string>
+    <string name="playagain">Redémarrer</string>
+    <string name="results1">Félicitations, tu as réussi </string>
+    <string name="results2"> sur </string>
+
+    <string name="present_attempted">Verbes au présent essayés:</string>
+    <string name="present_passed">Verbes au présent réussis:</string>
+    <string name="present_pass_rate">Taux de réussite:</string>
+    <string name="imp_attempted">Verbes à l\'imparfait essayés:</string>
+    <string name="imp_passed">Verbes à l\'imparfait Passed:</string>
+    <string name="imp_pass_rate">Taux de réussite:</string>
+    <string name="pc_attempted">Verbes au passé composé essayés:</string>
+    <string name="pc_passed">Verbes au passé composé réussis:</string>
+    <string name="pc_pass_rate">Taux de réussite:</string>
+    <string name="futur_attempted">Verbes au futur essayés:</string>
+    <string name="futur_passed">Verbes au futur réussis:</string>
+    <string name="futur_pass_rate">Taux de réussite:</string>
+    <string name="cond_attempted">Verbes au conditionnel (présent) essayés:</string>
+    <string name="cond_passed">Verbes au conditionnel (présent) réussis:</string>
+    <string name="cond_pass_rate">Taux de réussite:</string>
+
+    <string name="placeholder">XXX</string>
+
+    <string-array name="tenses">
+        <item>Présent</item>
+        <item>Imparfait</item>
+        <item>Passé composé</item>
+        <item>Futur</item>
+        <item>Conditionnel (Présent)</item>
+    </string-array>
+    <string-array name="times">
+        <item>1 minute</item>
+        <item>2 minutes</item>
+        <item>5 minutes</item>
+    </string-array>
+</resources>

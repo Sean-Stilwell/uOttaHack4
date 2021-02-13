@@ -76,18 +76,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String val = parent.getItemAtPosition(position).toString();
-        if (val.equals("Présent")){
-            PlayGame.tenseVal = 0;
-        } else if (val.equals("Imparfait")){
-            PlayGame.tenseVal = 1;
-        } else if (val.equals("Passé composé")){
-            PlayGame.tenseVal = 2;
-        } else if (val.equals("Futur")){
-            PlayGame.tenseVal = 3;
-        } else if (val.equals("Conditionnel (Présent)")){
-            PlayGame.tenseVal = 4;
-        }
 
+        // Selection values for the tense to be played
+        if (val.equals("Présent")){ PlayGame.tenseVal = 0; }
+        else if (val.equals("Imparfait")){ PlayGame.tenseVal = 1; }
+        else if (val.equals("Passé composé")){ PlayGame.tenseVal = 2; }
+        else if (val.equals("Futur")){ PlayGame.tenseVal = 3; }
+        else if (val.equals("Conditionnel (Présent)")){ PlayGame.tenseVal = 4; }
+
+        // Selection values for the length of time to be played
         if (val.equals("1 minute")){
             PlayGame.time = 60;
             PlayGame.startingTime = 60;
