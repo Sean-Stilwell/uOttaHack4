@@ -87,6 +87,8 @@ public class PlayGame extends AppCompatActivity {
     public void submitButton(View v){
         // We save the Edit Text box as a variable so we can clear it after a submission.
         EditText box = (EditText) findViewById(R.id.answerBox);
+        TextView resultView1 = (TextView) findViewById(R.id.textView55);
+        TextView resultView2 = (TextView) findViewById(R.id.textView56);
 
         // We keep track of how users perform in each verb tense.
         int totalAttempts = prefs.getInt(tense + "attempts", 0);
@@ -95,12 +97,17 @@ public class PlayGame extends AppCompatActivity {
 
         // If the user gets an answer right, they are awarded points.
         if (box.getText().toString().toLowerCase().trim().equals(answer.trim())){
+            resultView1.setVisibility(View.GONE);
+            resultView2.setVisibility(View.GONE);
             points = points + 10;
             correct++;
             totalCorrect++;
         }
         else { // If the user is wrong, their points are decremented
             points = points - 5;
+            resultView1.setVisibility(View.VISIBLE);
+            resultView2.setVisibility(View.VISIBLE);
+            resultView2.setText(answer);
         }
         attempts++;
 
@@ -158,7 +165,7 @@ public class PlayGame extends AppCompatActivity {
 
             verb = array[0]; // The unconjugated verb is found in the 0 position
             generatePronoun(); // We select a random pronoun to be used in the solution
-            answer = array[pronounVal + 1]; // We then select the answer that corresponds to the pronoun.
+            answer = array[pronounVal + 1].trim(); // We then select the answer that corresponds to the pronoun.
             if (pronoun.equals("Je")){
                 validateJe();
             }

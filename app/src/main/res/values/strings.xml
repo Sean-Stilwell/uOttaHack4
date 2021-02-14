@@ -36,6 +36,7 @@
     <string name="sub_attempted">Subjonctif (Présent) Verbs Attempted:</string>
     <string name="sub_passed">Subjonctif (Présent) Verbs Passed:</string>
     <string name="sub_pass_rate">Subjonctif (Présent) Pass Rate:</string>
+    <string name="incorrect">Incorrect. The correct answer was:</string>
 
     <string name="placeholder">XXX</string>
 

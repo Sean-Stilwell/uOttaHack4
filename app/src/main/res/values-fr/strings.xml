@@ -36,6 +36,7 @@
     <string name="sub_attempted">Verbes au subjonctif (présent) essayés:</string>
     <string name="sub_passed">Verbes au subjonctif (présent) réussis:</string>
     <string name="sub_pass_rate">Taux de réussite:</string>
+    <string name="incorrect">Incorrecte. La bonne réponse était:</string>
 
     <string name="placeholder">XXX</string>
 
