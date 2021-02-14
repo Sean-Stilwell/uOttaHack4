@@ -13,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.io.InputStream;
 import java.util.List;
-import java.util.Locale;
 import java.util.Random;
 
 public class PlayGame extends AppCompatActivity {
@@ -56,6 +55,8 @@ public class PlayGame extends AppCompatActivity {
             tense = "Futur";
         } else if (tenseVal == 4){
             tense = "Conditionnel (Présent)";
+        } else if (tenseVal == 5) {
+            tense = "Subjonctif";
         } else {
             tense = "Présent";
         }
@@ -144,6 +145,7 @@ public class PlayGame extends AppCompatActivity {
             if (tenseVal == 2) { inputStream = getResources().openRawResource(R.raw.passecompose); }
             if (tenseVal == 3) { inputStream = getResources().openRawResource(R.raw.futur); }
             if (tenseVal == 4) { inputStream = getResources().openRawResource(R.raw.conditionnel); }
+            if (tenseVal == 5) { inputStream = getResources().openRawResource(R.raw.present); } // TODO: CHANGE TO SUBJUNCTIVE
 
             // We use this custom class to read that CSV file, and then convert it to list format.
             CSVFile csvFile = new CSVFile(inputStream);

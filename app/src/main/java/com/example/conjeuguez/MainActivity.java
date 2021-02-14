@@ -8,10 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -83,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         else if (val.equals("Passé composé")){ PlayGame.tenseVal = 2; }
         else if (val.equals("Futur")){ PlayGame.tenseVal = 3; }
         else if (val.equals("Conditionnel (Présent)")){ PlayGame.tenseVal = 4; }
+        else if (val.equals("Subjonctif (Présent)")){ PlayGame.tenseVal = 5; }
 
         // Selection values for the length of time to be played
         if (val.equals("1 minute")){
@@ -92,8 +90,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             PlayGame.time = 120;
             PlayGame.startingTime = 120;
         } else if (val.equals("5 minutes")){
-            PlayGame.time = 500;
-            PlayGame.startingTime = 500;
+            PlayGame.time = 300;
+            PlayGame.startingTime = 300;
         }
     }
 

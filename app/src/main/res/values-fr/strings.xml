@@ -33,6 +33,9 @@
     <string name="cond_attempted">Verbes au conditionnel (présent) essayés:</string>
     <string name="cond_passed">Verbes au conditionnel (présent) réussis:</string>
     <string name="cond_pass_rate">Taux de réussite:</string>
+    <string name="sub_attempted">Verbes au subjonctif (présent) essayés:</string>
+    <string name="sub_passed">Verbes au subjonctif (présent) réussis:</string>
+    <string name="sub_pass_rate">Taux de réussite:</string>
 
     <string name="placeholder">XXX</string>
 
@@ -42,6 +45,7 @@
         <item>Passé composé</item>
         <item>Futur</item>
         <item>Conditionnel (Présent)</item>
+        <item>Subjonctif (Présent)</item>
     </string-array>
     <string-array name="times">
         <item>1 minute</item>

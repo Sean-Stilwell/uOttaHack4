@@ -82,6 +82,18 @@ public class Stats extends AppCompatActivity {
         condAttemptsView.setText(Integer.toString((int) condAttempts));
         condCorrectView.setText(Integer.toString((int) condCorrect));
         condRateView.setText(Integer.toString(condsuccessRate) + "%");
+
+        // SUBJUNCTIVE (PRESENT) STATS
+        TextView subAttemptsView = (TextView) findViewById(R.id.textView50);
+        TextView subCorrectView = (TextView) findViewById(R.id.textView52);
+        TextView subRateView = (TextView) findViewById(R.id.textView54);
+        float subAttempts = (float) prefs.getInt("Subjonctif (Présent)attempts", 0);
+        float subCorrect = (float) prefs.getInt("Subjonctif (Présent)correct", 0);
+        int subsuccessRate = 0;
+        if (subAttempts > 0) { subsuccessRate = (int) ((subCorrect / subAttempts) * 100); }
+        subAttemptsView.setText(Integer.toString((int) subAttempts));
+        subCorrectView.setText(Integer.toString((int) subCorrect));
+        subRateView.setText(Integer.toString(subsuccessRate) + "%");
     }
 
     /**
