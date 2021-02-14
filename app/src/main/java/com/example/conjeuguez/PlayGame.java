@@ -93,7 +93,7 @@ public class PlayGame extends AppCompatActivity {
         int totalCorrect = prefs.getInt(tense + "correct", 0);
 
         // If the user gets an answer right, they are awarded points.
-        if (box.getText().toString().toLowerCase().equals(answer.trim())){
+        if (box.getText().toString().toLowerCase().trim().equals(answer.trim())){
             points = points + 10;
             correct++;
             totalCorrect++;
