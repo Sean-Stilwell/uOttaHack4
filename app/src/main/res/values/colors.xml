@@ -7,5 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blue">#001F97</color>
+
+    <color name="main_colour">#001F97</color>
+    <color name="quebec_blue">#001F97</color>
+    <color name="ontario_green">#00693c</color>
 </resources>

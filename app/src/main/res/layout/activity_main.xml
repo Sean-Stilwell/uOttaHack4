@@ -19,7 +19,8 @@
             android:layout_height="170dp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="@string/logo"
-            app:srcCompat="@drawable/logo_en" />
+            app:srcCompat="@drawable/test_logo_white"
+            app:tint="@color/main_colour" />
 
         <TextView
             android:id="@+id/textView"
@@ -87,7 +88,7 @@
                 android:onClick="playGameButton"
                 android:text="@string/start_button"
                 android:textSize="18sp"
-                app:backgroundTint="#001F97" />
+                app:backgroundTint="@color/main_colour" />
 
             <Button
                 android:id="@+id/button3"
@@ -98,7 +99,7 @@
                 android:onClick="statsButton"
                 android:text="@string/stats_button"
                 android:textSize="18sp"
-                app:backgroundTint="#001F97" />
+                app:backgroundTint="@color/main_colour" />
         </LinearLayout>
 
         <LinearLayout
@@ -120,7 +121,8 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/website_icon" />
+                app:srcCompat="@drawable/website_icon"
+                app:tint="@color/main_colour" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
@@ -134,7 +136,8 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:scaleType="fitCenter"
-                app:srcCompat="@drawable/github_icon" />
+                app:srcCompat="@drawable/github_icon"
+                app:tint="@color/main_colour" />
 
         </LinearLayout>
 

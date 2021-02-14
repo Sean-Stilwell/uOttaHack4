@@ -145,7 +145,7 @@ public class PlayGame extends AppCompatActivity {
             if (tenseVal == 2) { inputStream = getResources().openRawResource(R.raw.passecompose); }
             if (tenseVal == 3) { inputStream = getResources().openRawResource(R.raw.futur); }
             if (tenseVal == 4) { inputStream = getResources().openRawResource(R.raw.conditionnel); }
-            if (tenseVal == 5) { inputStream = getResources().openRawResource(R.raw.present); } // TODO: CHANGE TO SUBJUNCTIVE
+            if (tenseVal == 5) { inputStream = getResources().openRawResource(R.raw.subjonctif); }
 
             // We use this custom class to read that CSV file, and then convert it to list format.
             CSVFile csvFile = new CSVFile(inputStream);

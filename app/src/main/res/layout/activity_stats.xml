@@ -18,7 +18,8 @@
             android:layout_height="170dp"
             android:contentDescription="@string/logo"
             android:paddingTop="40dp"
-            app:srcCompat="@drawable/logo_en" />
+            app:srcCompat="@drawable/test_logo_white"
+            app:tint="@color/main_colour" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -65,7 +66,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -93,7 +94,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="18sp" />
 
                 </LinearLayout>
@@ -121,7 +122,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="18sp" />
                 </LinearLayout>
 
@@ -149,7 +150,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -176,7 +177,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -203,7 +204,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -231,7 +232,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -258,7 +259,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -285,7 +286,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
 
                 </LinearLayout>
@@ -314,7 +315,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -341,7 +342,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -368,7 +369,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -395,7 +396,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -421,7 +422,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -448,7 +449,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -476,7 +477,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -503,7 +504,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -520,7 +521,7 @@
                         android:gravity="end"
                         android:paddingLeft="15dp"
                         android:paddingRight="15dp"
-                        android:text="@string/cond_pass_rate"
+                        android:text="@string/sub_pass_rate"
                         android:textColor="#000000"
                         android:textSize="17sp" />
 
@@ -530,7 +531,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/placeholder"
-                        android:textColor="#001F97"
+                        android:textColor="@color/main_colour"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -545,7 +546,7 @@
                     android:onClick="resetstats"
                     android:text="@string/reset_stats_button"
                     android:textSize="18sp"
-                    app:backgroundTint="#001F97" />
+                    app:backgroundTint="@color/main_colour" />
             </LinearLayout>
         </ScrollView>
 
