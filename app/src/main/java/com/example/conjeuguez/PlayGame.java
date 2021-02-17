@@ -57,6 +57,12 @@ public class PlayGame extends AppCompatActivity {
             tense = "Conditionnel (Présent)";
         } else if (tenseVal == 5) {
             tense = "Subjonctif";
+        } else if (tenseVal == 6) {
+            tense = "Conditionnel (Passé)";
+        } else if (tenseVal == 7) {
+            tense = "Futur antérieur";
+        } else if (tenseVal == 8) {
+            tense = "Plus-que-parfait";
         } else {
             tense = "Présent";
         }
@@ -153,6 +159,9 @@ public class PlayGame extends AppCompatActivity {
             if (tenseVal == 3) { inputStream = getResources().openRawResource(R.raw.futur); }
             if (tenseVal == 4) { inputStream = getResources().openRawResource(R.raw.conditionnel); }
             if (tenseVal == 5) { inputStream = getResources().openRawResource(R.raw.subjonctif); }
+            if (tenseVal == 6) { inputStream = getResources().openRawResource(R.raw.conditionnelpasse); }
+            if (tenseVal == 7) { inputStream = getResources().openRawResource(R.raw.futuranterieur); }
+            if (tenseVal == 8) { inputStream = getResources().openRawResource(R.raw.plusqueparfait); }
 
             // We use this custom class to read that CSV file, and then convert it to list format.
             CSVFile csvFile = new CSVFile(inputStream);

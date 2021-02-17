@@ -53,8 +53,11 @@
         <item>Présent</item>
         <item>Imparfait</item>
         <item>Passé composé</item>
+        <item>Plus-que-parfait</item>
         <item>Futur</item>
+        <item>Futur antérieur</item>
         <item>Conditionnel (Présent)</item>
+        <item>Conditionnel (Passé)</item>
         <item>Subjonctif (Présent)</item>
     </string-array>
     <string-array name="times">

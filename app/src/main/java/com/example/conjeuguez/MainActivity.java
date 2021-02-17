@@ -81,6 +81,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         else if (val.equals("Futur")){ PlayGame.tenseVal = 3; }
         else if (val.equals("Conditionnel (Présent)")){ PlayGame.tenseVal = 4; }
         else if (val.equals("Subjonctif (Présent)")){ PlayGame.tenseVal = 5; }
+        else if (val.equals("Conditionnel (Passé)")){ PlayGame.tenseVal = 6; }
+        else if (val.equals("Futur antérieur")){ PlayGame.tenseVal = 7; }
+        else if (val.equals("Plus-que-parfait")){ PlayGame.tenseVal = 8; }
 
         // Selection values for the length of time to be played
         if (val.equals("1 minute")){
