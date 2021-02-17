@@ -36,8 +36,18 @@
     <string name="sub_attempted">Subjonctif (Présent) Verbs Attempted:</string>
     <string name="sub_passed">Subjonctif (Présent) Verbs Passed:</string>
     <string name="sub_pass_rate">Subjonctif (Présent) Pass Rate:</string>
-    <string name="incorrect">Incorrect. The correct answer was:</string>
+    <string name="cond_passe_attempted">Conditionnel (Passé) Attempted:</string>
+    <string name="cond_passe_passed">Conditionnel (Passé) Verbs Passed:</string>
+    <string name="cond_passe_pass_rate">Conditionnel (Passé) Pass Rate:</string>
+    <string name="futur_anterieur_attempted">Futur Antérieur Verbs Attempted:</string>
+    <string name="futur_anterieur_passed">Futur Antérieur Verbs Passed:</string>
+    <string name="futur_anterieur_pass_rate">Futur Antérieur Pass Rate:</string>
+    <string name="pqp_attempted">Plus-que-parfait Verbs Attempted:</string>
+    <string name="pqp_passed">Plus-que-parfait Verbs Passed:</string>
+    <string name="pqp_pass_rate">Plus-que-parfait Pass Rate:</string>
 
+
+    <string name="incorrect">Incorrect. The correct answer was:</string>
     <string name="placeholder">XXX</string>
 
     <string-array name="tenses">
