@@ -95,10 +95,10 @@ public class Stats extends AppCompatActivity {
         subCorrectView.setText(Integer.toString((int) subCorrect));
         subRateView.setText(Integer.toString(subsuccessRate) + "%");
 
-        // COND (PASSE) STATS TODO: update the textviews
-        TextView condpassAttemptsView = (TextView) findViewById(R.id.textView37);
-        TextView condpassCorrectView = (TextView) findViewById(R.id.textView39);
-        TextView condpassRateView = (TextView) findViewById(R.id.textView41);
+        // COND (PASSE) STATS
+        TextView condpassAttemptsView = (TextView) findViewById(R.id.textView58);
+        TextView condpassCorrectView = (TextView) findViewById(R.id.textView64);
+        TextView condpassRateView = (TextView) findViewById(R.id.textView72);
         float condpassAttempts = (float) prefs.getInt("Conditionnel (Passé)attempts", 0);
         float condpassCorrect = (float) prefs.getInt("Conditionnel (Passé)correct", 0);
         int condpasssuccessRate = 0;
@@ -107,10 +107,10 @@ public class Stats extends AppCompatActivity {
         condpassCorrectView.setText(Integer.toString((int) condpassCorrect));
         condpassRateView.setText(Integer.toString(condpasssuccessRate) + "%");
 
-        // FUTUR ANTERIEUR STATS TODO: update the textviews
-        TextView futAntAttemptsView = (TextView) findViewById(R.id.textView33);
-        TextView futAntCorrectView = (TextView) findViewById(R.id.textView35);
-        TextView futAntRateView = (TextView) findViewById(R.id.textView44);
+        // FUTUR ANTERIEUR STATS
+        TextView futAntAttemptsView = (TextView) findViewById(R.id.textView60);
+        TextView futAntCorrectView = (TextView) findViewById(R.id.textView66);
+        TextView futAntRateView = (TextView) findViewById(R.id.textView73);
         float futAntAttempts = (float) prefs.getInt("Futur antérieurattempts", 0);
         float futAntCorrect = (float) prefs.getInt("Futur antérieurcorrect", 0);
         int futAntsuccessRate = 0;
@@ -119,10 +119,10 @@ public class Stats extends AppCompatActivity {
         futAntCorrectView.setText(Integer.toString((int) futAntCorrect));
         futAntRateView.setText(Integer.toString(futAntsuccessRate) + "%");
 
-        // PLUS QUE PARFAIT STATS TODO: update the textviews
-        TextView pqpAttemptsView = (TextView) findViewById(R.id.textView50);
-        TextView pqpCorrectView = (TextView) findViewById(R.id.textView52);
-        TextView pqpRateView = (TextView) findViewById(R.id.textView54);
+        // PLUS QUE PARFAIT STATS
+        TextView pqpAttemptsView = (TextView) findViewById(R.id.textView62);
+        TextView pqpCorrectView = (TextView) findViewById(R.id.textView68);
+        TextView pqpRateView = (TextView) findViewById(R.id.textView74);
         float pqpAttempts = (float) prefs.getInt("Plus-que-parfaitattempts", 0);
         float pqpCorrect = (float) prefs.getInt("Plus-que-parfaitcorrect", 0);
         int pqpsuccessRate = 0;
